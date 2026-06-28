@@ -9,316 +9,422 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header class="hero" id="top">
-    <div class="hero__overlay"></div>
+    <div class="hero__image"></div>
+    <div class="hero__shade"></div>
 
     <nav class="nav">
+      <a href="#letter">Письмо</a>
+      <a href="#details">Детали</a>
       <a href="#program">Программа</a>
-      <a href="#locations">Локации</a>
       <a href="#rsvp">RSVP</a>
     </nav>
 
     <div class="hero__content">
-      <p class="eyebrow">Санкт-Петербург</p>
-      <h1>Александр <span>&</span> Анна</h1>
-      <p class="hero__date">12 сентября 2026</p>
-      <p class="hero__subtitle">Будем счастливы разделить с вами этот важный день</p>
-      <a class="button button--primary" href="#rsvp">Подтвердить присутствие</a>
-    </div>
+      <p class="hero__kicker">Приглашение на свадьбу</p>
+      <p class="hero__date-small">12 сентября 2026 г.</p>
 
-    <div class="scroll-hint">листайте вниз</div>
+      <div class="hero__monogram">А & А</div>
+
+      <h1>Александр & Анна</h1>
+      <p class="hero__place">Санкт-Петербург · начало в 18:20</p>
+
+      <a class="scroll-down" href="#letter" aria-label="Листать ниже">
+        <span>листайте ниже</span>
+        <i></i>
+      </a>
+    </div>
   </header>
 
   <main>
-    <section class="section invite">
-      <div class="container narrow">
-        <p class="eyebrow">Приглашение</p>
-        <h2>Дорогие гости!</h2>
-        <p>
-          Совсем скоро состоится важный для нас день — день нашей свадьбы.
-        </p>
-        <p>
-          Мы будем очень счастливы, если вы разделите с нами этот момент и станете
-          частью нашего праздника. Нас ждёт тёплый вечер в Санкт-Петербурге,
-          церемония, фотографии, фуршет и встреча с самыми близкими людьми.
-        </p>
-        <p class="signature">С любовью,<br>Александр и Анна</p>
-      </div>
-    </section>
-
-    <section class="section story">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Наша история</p>
-          <h2>Моменты, которые хочется сохранить</h2>
+    <section class="section letter" id="letter">
+      <div class="container centered">
+        <div class="section-number">
+          <span>01</span>
+          <p>Письмо</p>
         </div>
 
-        <div class="photo-grid">
-          <div class="photo-card photo-card--large">
-            <div class="photo-placeholder">
-              <span>Фото пары</span>
-              <small>замените на своё фото</small>
-            </div>
-          </div>
+        <p class="small-title">Дорогие и любимые</p>
 
-          <div class="photo-card">
-            <div class="photo-placeholder">
-              <span>Фото</span>
-            </div>
-          </div>
+        <p class="intro-text">
+          Мы очень хотим, чтобы наш свадебный день был наполнен светом,
+          красивыми деталями и людьми, без которых его невозможно представить
+          по-настоящему.
+        </p>
 
-          <div class="photo-card">
-            <div class="photo-placeholder">
-              <span>Фото</span>
-            </div>
-          </div>
-        </div>
+        <h2 class="big-italic">
+          Будем счастливы разделить<br>
+          этот вечер вместе с вами.
+        </h2>
 
-        <p class="story__text">
-          Каждая история любви состоит из множества маленьких моментов.
-          И мы очень рады, что один из самых важных моментов сможем разделить с вами.
+        <p class="intro-text">
+          Приходите поддержать нас, обняться, улыбнуться и стать частью момента,
+          с которого начнётся новая глава нашей семьи.
         </p>
       </div>
     </section>
 
-    <section class="section dates">
+    <section class="section details" id="details">
       <div class="container">
-        <div class="cards two">
-          <article class="date-card">
-            <p class="date-card__day">12</p>
-            <p class="date-card__month">сентября 2026</p>
-            <h3>Церемония, фотосессия и фуршет</h3>
-          </article>
+        <div class="section-number left">
+          <span>02</span>
+          <p>Детали</p>
+        </div>
 
-          <article class="date-card">
-            <p class="date-card__day">13</p>
-            <p class="date-card__month">сентября 2026</p>
-            <h3>Уютная встреча в лофте</h3>
-          </article>
+        <div class="details-grid">
+          <div class="details-list">
+            <div class="detail-item">
+              <p class="label">Дата</p>
+              <h3>12 сентября 2026</h3>
+              <p>Суббота</p>
+            </div>
+
+            <div class="detail-item">
+              <p class="label">Церемония</p>
+              <h3>Дворец бракосочетания № 2</h3>
+              <p>Санкт-Петербург, Фурштатская улица, 52</p>
+            </div>
+
+            <div class="detail-item">
+              <p class="label">Сбор гостей</p>
+              <h3>18:00</h3>
+              <p>Просим приходить немного заранее.</p>
+            </div>
+
+            <div class="detail-item">
+              <p class="label">Начало церемонии</p>
+              <h3>18:20</h3>
+              <p>Главные слова вечера.</p>
+            </div>
+          </div>
+
+          <div class="details-note">
+            <p class="script-note">
+              Нам хочется, чтобы этот день ощущался лёгким, красивым и очень душевным.
+            </p>
+            <p>
+              Мы выбрали формат вечера, в котором будет место церемонии, фотографиям,
+              фуршету, разговорам и спокойному продолжению праздника.
+            </p>
+            <p>
+              После церемонии и фотосессии мы отправимся в отель «Амбассадор».
+              Трансфер от ЗАГСа до гостиницы будет организован — мы закажем такси.
+            </p>
+          </div>
+        </div>
+
+        <div class="map-section">
+          <div class="map-card">
+            <div class="map-card__top">
+              <p class="label">Карта</p>
+              <a href="https://yandex.ru/maps/?text=Дворец%20бракосочетания%20№%202%20Санкт-Петербург%20Фурштатская%2052" target="_blank" rel="noopener">
+                Открыть в Яндекс Картах
+              </a>
+            </div>
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?text=Дворец%20бракосочетания%20№%202%20Санкт-Петербург%20Фурштатская%2052&z=15"
+              loading="lazy">
+            </iframe>
+          </div>
+
+          <div class="map-card">
+            <div class="map-card__top">
+              <p class="label">Фуршет</p>
+              <a href="https://yandex.ru/maps/?text=Отель%20Амбассадор%20Санкт-Петербург%20Римского-Корсакова%205-7" target="_blank" rel="noopener">
+                Открыть в Яндекс Картах
+              </a>
+            </div>
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?text=Отель%20Амбассадор%20Санкт-Петербург%20Римского-Корсакова%205-7&z=15"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section countdown-section">
+      <div class="container centered">
+        <div class="section-number">
+          <span>03</span>
+          <p>Обратный отсчёт</p>
+        </div>
+
+        <div class="countdown" aria-label="Обратный отсчёт до свадьбы">
+          <div>
+            <strong id="days">—</strong>
+            <span>дней</span>
+          </div>
+          <i>/</i>
+          <div>
+            <strong id="hours">—</strong>
+            <span>часов</span>
+          </div>
+          <i>/</i>
+          <div>
+            <strong id="minutes">—</strong>
+            <span>минуты</span>
+          </div>
+          <i>/</i>
+          <div>
+            <strong id="seconds">—</strong>
+            <span>секунды</span>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section program" id="program">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Первый день</p>
-          <h2>Программа 12 сентября</h2>
+        <div class="section-number left">
+          <span>04</span>
+          <p>Программа</p>
         </div>
 
         <div class="timeline">
-          <div class="timeline-item">
+          <article class="timeline-item left-side">
             <time>18:00</time>
-            <p>Сбор гостей</p>
-          </div>
-          <div class="timeline-item">
-            <time>18:20</time>
-            <p>Церемония и фотосессия</p>
-          </div>
-          <div class="timeline-item">
-            <time>19:20</time>
-            <p>Выезд на фуршет</p>
-          </div>
-          <div class="timeline-item">
-            <time>19:40</time>
-            <p>Начало фуршета</p>
-          </div>
-          <div class="timeline-item">
-            <time>22:00</time>
-            <p>Завершение фуршета</p>
-          </div>
-          <div class="timeline-item">
-            <time>23:00</time>
-            <p>Сбор в заведении Х</p>
-          </div>
-        </div>
+            <h3>Сбор гостей</h3>
+            <p>Встречаемся во Дворце бракосочетания № 2.</p>
+          </article>
 
-        <p class="note">
-          Просим гостей приходить немного заранее, чтобы мы успели собраться
-          перед началом церемонии.
-        </p>
+          <article class="timeline-item right-side">
+            <time>18:20</time>
+            <h3>Церемония</h3>
+            <p>Главные слова и самый трогательный момент дня.</p>
+          </article>
+
+          <article class="timeline-item left-side">
+            <time>18:40</time>
+            <h3>Фотосессия</h3>
+            <p>Несколько общих кадров и немного времени для свадебных фотографий.</p>
+          </article>
+
+          <article class="timeline-item right-side">
+            <time>19:20</time>
+            <h3>Выезд на фуршет <sup>*</sup></h3>
+            <p>Трансфер от ЗАГСа до гостиницы предоставляется — закажем такси.</p>
+          </article>
+
+          <article class="timeline-item left-side">
+            <time>19:40</time>
+            <h3>Начало фуршета</h3>
+            <p>Приветственный коктейль, лёгкий ужин и время для общения.</p>
+          </article>
+
+          <article class="timeline-item right-side">
+            <time>22:00</time>
+            <h3>Завершение фуршета</h3>
+            <p>Официальная часть вечера подходит к концу.</p>
+          </article>
+
+          <article class="timeline-item left-side">
+            <time>23:00</time>
+            <h3>Заведение Х</h3>
+            <p>Если захочется продолжить вечер, встречаемся в заведении Х. Локацию сообщим дополнительно.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section second-day">
-      <div class="container narrow">
-        <p class="eyebrow">Второй день</p>
-        <h2>13 сентября — встреча в лофте</h2>
-        <p>
+      <div class="container centered">
+        <div class="section-number">
+          <span>05</span>
+          <p>Второй день</p>
+        </div>
+
+        <h2 class="big-italic">13 сентября — встреча в лофте</h2>
+
+        <p class="intro-text">
           На следующий день мы продолжим праздник в более свободной и уютной атмосфере.
-          Это будет спокойная встреча для общения, воспоминаний и продолжения
-          свадебного настроения.
+          Это будет спокойная встреча для общения, воспоминаний и продолжения свадебного настроения.
         </p>
 
-        <div class="mini-schedule">
+        <div class="second-day-time">
           <div>
-            <time>15:00</time>
-            <span>Начало встречи</span>
+            <span>15:00</span>
+            <p>Начало встречи</p>
           </div>
           <div>
-            <time>21:00</time>
-            <span>Завершение вечера</span>
+            <span>21:00</span>
+            <p>Завершение вечера</p>
           </div>
         </div>
 
-        <p class="note">Лофт — локация уточняется. Адрес и детали сообщим дополнительно.</p>
+        <p class="muted">Лофт — локация уточняется. Адрес и детали сообщим дополнительно.</p>
       </div>
     </section>
 
-    <section class="section locations" id="locations">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Локации</p>
-          <h2>Где мы встречаемся</h2>
+    <section class="section wishes">
+      <div class="container centered">
+        <div class="section-number">
+          <span>06</span>
+          <p>Пожелания</p>
         </div>
 
-        <div class="location-grid">
-          <article class="location-card">
-            <h3>Церемония</h3>
-            <p>Дворец бракосочетания № 2</p>
-            <p>Санкт-Петербург, Фурштатская улица, 52</p>
-            <a href="https://yandex.ru/maps/?text=Дворец%20бракосочетания%20№%202%20Санкт-Петербург%20Фурштатская%2052" target="_blank" rel="noopener">
-              Открыть на карте
-            </a>
-          </article>
+        <h2 class="big-italic">
+          Ваше присутствие уже<br>
+          является для нас большим подарком.
+        </h2>
 
-          <article class="location-card">
-            <h3>Фуршет</h3>
-            <p>Отель «Амбассадор»</p>
-            <p>Санкт-Петербург, проспект Римского-Корсакова, 5–7</p>
-            <a href="https://yandex.ru/maps/?text=Отель%20Амбассадор%20Санкт-Петербург%20Римского-Корсакова%205-7" target="_blank" rel="noopener">
-              Открыть на карте
-            </a>
-          </article>
-
-          <article class="location-card location-card--muted">
-            <h3>Заведение Х</h3>
-            <p>Локация уточняется</p>
-            <p>Подробности сообщим дополнительно.</p>
-          </article>
-
-          <article class="location-card location-card--muted">
-            <h3>Лофт</h3>
-            <p>Локация уточняется</p>
-            <p>Адрес второго дня сообщим дополнительно.</p>
-          </article>
-        </div>
+        <p class="intro-text">
+          Если вы захотите порадовать нас чем-то ещё, мы будем благодарны за вклад
+          в наш семейный бюджет — он поможет нам начать новую главу красиво и с теплом.
+        </p>
       </div>
     </section>
 
     <section class="section dress">
-      <div class="container narrow">
-        <p class="eyebrow">Дресс-код</p>
-        <h2>Smart casual</h2>
-        <p>
-          Строгого дресс-кода не будет. Нам важно, чтобы вам было красиво и комфортно.
-        </p>
-        <p>
-          Будем рады, если вы выберете smart casual и образ, который подойдёт
-          для тёплого свадебного вечера в Санкт-Петербурге.
-        </p>
-      </div>
-    </section>
+      <div class="container centered">
+        <div class="section-number">
+          <span>07</span>
+          <p>Дресс-код</p>
+        </div>
 
-    <section class="section gifts">
-      <div class="container narrow">
-        <p class="eyebrow">О подарках</p>
-        <h2>Главное — ваше присутствие</h2>
-        <p>
-          Главный подарок для нас — ваше присутствие рядом в этот день.
-        </p>
-        <p>
-          А если вы захотите порадовать нас чем-то ещё, лучшим подарком станет
-          вклад в наш семейный бюджет — он поможет нам начать новую главу красиво и с теплом.
-        </p>
-      </div>
-    </section>
+        <h2 class="big-italic">Торжественно и комфортно</h2>
 
-    <section class="section details">
-      <div class="container narrow">
-        <p class="eyebrow">Важные детали</p>
-        <h2>Несколько организационных моментов</h2>
-        <p>
-          Пожалуйста, заполните форму подтверждения до 1 августа — это поможет нам
-          всё подготовить и учесть каждого гостя.
+        <p class="intro-text">
+          Мы никак не ограничиваем вас по цвету. Нам важно, чтобы вы чувствовали себя
+          красиво и свободно.
         </p>
-        <p>
-          Мы составляем список гостей индивидуально и заранее учитываем каждого приглашённого.
-        </p>
-        <p>
-          Праздник будет проходить во взрослом формате, поэтому будем рады видеть вас без детей.
-        </p>
-        <p>
-          По всем вопросам можно написать Александру или Анне.
+
+        <p class="intro-text">
+          Будем рады, если вы выберете торжественный smart casual — образ, который
+          подойдёт для тёплого свадебного вечера, северного света и атмосферы Петербурга.
         </p>
       </div>
     </section>
 
     <section class="section rsvp" id="rsvp">
       <div class="container">
-        <div class="rsvp-card">
-          <div class="rsvp-card__text">
-            <p class="eyebrow">RSVP</p>
-            <h2>Подтвердите, пожалуйста, ваше присутствие</h2>
+        <div class="section-number left">
+          <span>08</span>
+          <p>RSVP</p>
+        </div>
+
+        <div class="rsvp-layout">
+          <div class="rsvp-copy">
+            <h2>Подтвердите своё участие</h2>
+            <p class="deadline">Пожалуйста, заполните форму до 1 августа</p>
             <p>
-              Заполните форму до 1 августа, чтобы мы могли всё подготовить и учесть каждого гостя.
+              Это поможет нам подготовить вечер, учесть каждого гостя и заранее
+              продумать детали по напиткам и пожеланиям.
             </p>
+            <div class="rsvp-mark">А & А</div>
+            <p class="muted">Будем благодарны за быстрый ответ.</p>
           </div>
 
           <form class="rsvp-form" id="rsvpForm">
             <input type="text" name="website" class="hidden-field" tabindex="-1" autocomplete="off">
 
-            <label>
-              Имя и фамилия
-              <input type="text" name="name" placeholder="Например, Иван Иванов" required>
-            </label>
+            <div class="form-row">
+              <label for="name">Имя и фамилия</label>
+              <input id="name" type="text" name="name" placeholder="Иван Иванов" required>
+            </div>
 
-            <fieldset>
-              <legend>Придёте ли вы на свадьбу 12 сентября?</legend>
-              <label class="radio">
-                <input type="radio" name="weddingDay" value="Да, буду" required>
-                <span>Да, буду</span>
-              </label>
-              <label class="radio">
-                <input type="radio" name="weddingDay" value="К сожалению, не смогу">
-                <span>К сожалению, не смогу</span>
-              </label>
-            </fieldset>
+            <div class="form-row">
+              <p class="form-label">Сможете ли вы присутствовать 12 сентября?</p>
+              <div class="choice-row">
+                <label class="pill-choice">
+                  <input type="radio" name="weddingDay" value="Да, буду" required>
+                  <span>Да</span>
+                </label>
+                <label class="pill-choice">
+                  <input type="radio" name="weddingDay" value="К сожалению, не смогу">
+                  <span>Нет</span>
+                </label>
+              </div>
+            </div>
 
-            <fieldset>
-              <legend>Придёте ли вы на встречу 13 сентября?</legend>
-              <label class="radio">
-                <input type="radio" name="secondDay" value="Да, буду" required>
-                <span>Да, буду</span>
-              </label>
-              <label class="radio">
-                <input type="radio" name="secondDay" value="Нет, не смогу">
-                <span>Нет, не смогу</span>
-              </label>
-              <label class="radio">
-                <input type="radio" name="secondDay" value="Пока не знаю">
-                <span>Пока не знаю</span>
-              </label>
-            </fieldset>
+            <div class="form-row">
+              <p class="form-label">Придёте ли вы на встречу 13 сентября?</p>
+              <div class="choice-row">
+                <label class="pill-choice">
+                  <input type="radio" name="secondDay" value="Да, буду" required>
+                  <span>Да</span>
+                </label>
+                <label class="pill-choice">
+                  <input type="radio" name="secondDay" value="Нет, не смогу">
+                  <span>Нет</span>
+                </label>
+                <label class="pill-choice">
+                  <input type="radio" name="secondDay" value="Пока не знаю">
+                  <span>Пока не знаю</span>
+                </label>
+              </div>
+            </div>
 
-            <label>
-              Комментарий или пожелание
-              <textarea name="comment" rows="4" placeholder="Можно оставить комментарий"></textarea>
-            </label>
+            <div class="form-row">
+              <p class="cocktail-note">
+                На фуршете будет приветственный коктейль. Подскажите, какие напитки вам ближе.
+              </p>
 
-            <label>
-              Контактный телефон
-              <input type="tel" name="phone" placeholder="+7 ...">
-            </label>
+              <div class="checkbox-grid">
+                <label class="check-choice">
+                  <input type="checkbox" name="drinks" value="Пиво">
+                  <span>Пиво</span>
+                </label>
+                <label class="check-choice">
+                  <input type="checkbox" name="drinks" value="Вино белое полусухое">
+                  <span>Вино белое полусухое</span>
+                </label>
+                <label class="check-choice">
+                  <input type="checkbox" name="drinks" value="Вино красное полусухое">
+                  <span>Вино красное полусухое</span>
+                </label>
+                <label class="check-choice">
+                  <input type="checkbox" name="drinks" value="Игристое">
+                  <span>Игристое</span>
+                </label>
+                <label class="check-choice">
+                  <input type="checkbox" name="drinks" value="Водка">
+                  <span>Водка</span>
+                </label>
+                <label class="check-choice">
+                  <input type="checkbox" name="drinks" value="Виски">
+                  <span>Виски</span>
+                </label>
+              </div>
+            </div>
 
-            <button type="submit" class="button button--primary">Отправить</button>
+            <div class="form-row">
+              <p class="form-label">Есть ли у вас аллергии?</p>
+              <div class="choice-row">
+                <label class="pill-choice">
+                  <input type="radio" name="allergyStatus" value="Нет" required>
+                  <span>Нет</span>
+                </label>
+                <label class="pill-choice">
+                  <input type="radio" name="allergyStatus" value="Да">
+                  <span>Да</span>
+                </label>
+              </div>
+              <textarea name="allergyDetails" rows="2" placeholder="Если да, впишите сюда"></textarea>
+            </div>
 
+            <div class="form-row">
+              <label for="comment">Дополнительный комментарий</label>
+              <textarea id="comment" name="comment" rows="3" placeholder="Пожелания, детали или то, что нам важно знать"></textarea>
+            </div>
+
+            <div class="form-row">
+              <label for="questions">Если у вас остались вопросы, задайте их здесь</label>
+              <textarea id="questions" name="questions" rows="3" placeholder="Напишите вопрос — мы ответим лично"></textarea>
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Контактный телефон</label>
+              <input id="phone" type="tel" name="phone" placeholder="+7 ...">
+            </div>
+
+            <button type="submit" class="submit-button">Подтвердить</button>
             <p class="form-message" id="formMessage"></p>
           </form>
         </div>
@@ -326,11 +432,12 @@
     </section>
 
     <section class="section final">
-      <div class="container narrow">
-        <p class="eyebrow">С любовью</p>
-        <h2>Александр и Анна</h2>
-        <p>До встречи 12 сентября!</p>
-        <a class="button button--secondary" href="#top">Наверх</a>
+      <div class="final-line"></div>
+      <div class="container centered">
+        <p class="small-title">До встречи</p>
+        <h2 class="big-italic">Александр & Анна</h2>
+        <p class="intro-text">12 сентября 2026 · Санкт-Петербург</p>
+        <a class="back-to-top" href="#top">Наверх</a>
       </div>
     </section>
   </main>
