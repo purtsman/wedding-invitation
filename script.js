@@ -3,6 +3,63 @@ const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw7lIqFuMvnCr0gqU256
 const form    = document.getElementById('rsvpForm');
 const message = document.getElementById('formMessage');
 
+const phoneInput = document.getElementById('phone');
+
+function formatRussianPhone(value) {
+  let digits = value.replace(/\D/g, '');
+
+  if (digits.startsWith('8')) {
+    digits = '7' + digits.slice(1);
+  }
+
+  if (!digits.startsWith('7')) {
+    digits = '7' + digits;
+  }
+
+  digits = digits.slice(0, 11);
+
+  const part1 = digits.slice(1, 4);
+  const part2 = digits.slice(4, 7);
+  const part3 = digits.slice(7, 9);
+  const part4 = digits.slice(9, 11);
+
+  let formatted = '+7';
+
+  if (part1) formatted += ' ' + part1;
+  if (part2) formatted += ' ' + part2;
+  if (part3) formatted += '-' + part3;
+  if (part4) formatted += '-' + part4;
+
+  return formatted + (formatted === '+7' ? ' ' : '');
+}
+
+function resetPhoneField() {
+  if (phoneInput) {
+    phoneInput.value = '+7 ';
+  }
+}
+
+if (phoneInput) {
+  phoneInput.addEventListener('focus', function () {
+    if (!phoneInput.value.trim()) {
+      phoneInput.value = '+7 ';
+    }
+  });
+
+  phoneInput.addEventListener('input', function () {
+    phoneInput.value = formatRussianPhone(phoneInput.value);
+  });
+
+  phoneInput.addEventListener('keydown', function (event) {
+    if (
+      phoneInput.selectionStart <= 3 &&
+      (event.key === 'Backspace' || event.key === 'Delete')
+    ) {
+      event.preventDefault();
+    }
+  });
+}
+
 /* ── Countdown ─────────────────────────── */
 const countdownTarget = new Date(Date.UTC(2026, 8, 12, 15, 20, 0));
 // 12 сентября 2026, 18:20 МСК = 15:20 UTC
@@ -60,12 +117,13 @@ form.addEventListener('submit', async function (event) {
   const formData = new FormData(form);
 
   // Honeypot
-  if (formData.get('website')) {
-    message.textContent = 'Спасибо! Мы получили ваш ответ.';
-    message.classList.add('success');
-    form.reset();
-    return;
-  }
+if (formData.get('website')) {
+  message.textContent = 'Спасибо! Мы получили ваш ответ.';
+  message.classList.add('success');
+  form.reset();
+  resetPhoneField();
+  return;
+}
 
   const drinks        = formData.getAll('drinks').join(', ') || 'Не выбрано';
   const allergyStatus = formData.get('allergyStatus') || '';
@@ -104,9 +162,10 @@ form.addEventListener('submit', async function (event) {
       body:   JSON.stringify(data)
     });
 
-    message.textContent = 'Спасибо! Мы получили ваш ответ.';
-    message.classList.add('success');
-    form.reset();
+   message.textContent = 'Спасибо! Мы получили ваш ответ.';
+   message.classList.add('success');
+   form.reset();
+   resetPhoneField();
 
   } catch {
     message.textContent = 'Не удалось отправить форму. Попробуйте ещё раз.';
