@@ -33,6 +33,22 @@ function formatRussianPhone(value) {
   return formatted + (formatted === '+7' ? ' ' : '');
 }
 
+function normalizeRussianPhoneForSheet(value) {
+  let digits = value.replace(/\D/g, '');
+
+  if (digits.startsWith('8')) {
+    digits = '7' + digits.slice(1);
+  }
+
+  if (!digits.startsWith('7')) {
+    digits = '7' + digits;
+  }
+
+  digits = digits.slice(0, 11);
+
+  return digits.length === 11 ? `+${digits}` : value;
+}
+
 function resetPhoneField() {
   if (phoneInput) {
     phoneInput.value = '+7 ';
@@ -147,7 +163,7 @@ if (formData.get('website')) {
     allergies,
     comment:    formData.get('comment'),
     questions:  formData.get('questions'),
-    phone:      formData.get('phone')
+    phone:      normalizeRussianPhoneForSheet(formData.get('phone') || '')
   };
 
   const submitButton = form.querySelector('button[type="submit"]');
