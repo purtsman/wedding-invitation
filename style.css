@@ -853,3 +853,19 @@ h1 {
   .pill-choice span,
   .check-choice span { width: 100%; }
 }
+
+/* ── Form validation error states ────────────────────────────────────
+   .error-field  — text input or textarea with missing value
+   .error-group  — radio/checkbox group with no selection
+─────────────────────────────────────────────────────────────────────── */
+.rsvp-form input.error-field,
+.rsvp-form textarea.error-field {
+  border-bottom-color: #c0392b !important;
+}
+
+.error-group {
+  /* outline sits outside the element, so layout is not affected */
+  outline: 1.5px solid #c0392b;
+  outline-offset: 7px;
+  border-radius: 8px;
+}
